@@ -28,14 +28,15 @@ If it can't connect to your network it will create a Access Point (CGScale) on 1
 
 The webpage that the webserver uses is not made by me. I found it here:  
 [Guillaumef's html.h file on GitHub](https://github.com/guillaumef/cg-scale-wifi-oled/blob/master/soft/html.h)  
-A lot of thanks to Guillamef for his work!
-The webpage was slightly changed for my software.
+A lot of thanks to Guillamef for his work!  
+The webpage was slightly changed for my software.  
 
-All the libraries to make the project work, can be found in the folder /lib.
+All the libraries to make the project work, can be found in the folder /lib.  
 
 The enclosure to put in all the hardware and finalize the scale can be found here:  
 [Greg_Ory's scale on thingiverse.com](https://www.thingiverse.com/thing:5145294)  
-Many thanks to Greg Ory!
-The baseplate had to be adapted to hold the devkit, batterie and HX711.
+Many thanks to Greg Ory!  
+The baseplate had to be adapted, with the help of a friend to hold the devkit, batterie and HX711.  
+@François :+1: Thanks for the help!  
 The STL files can be found in the /stl/ folder
 
