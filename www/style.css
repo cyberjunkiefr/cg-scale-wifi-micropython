@@ -157,7 +157,7 @@ button.apparence {
     border-radius: 8px;
     text-align: center;
     color:rgb(255, 199, 109);
-    animation:fading 1s infinite;
+    animation:fading 3s infinite;
     padding: 15px 10px;
   }
 
@@ -170,7 +170,7 @@ button.apparence {
   }
 
   .blink_save_config {
-    background-color:rgb(122, 77, 54);
+    background-color:rgba(122, 77, 54, 0.5);
     animation:fading 2s infinite;
   }
 
