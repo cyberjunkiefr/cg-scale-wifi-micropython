@@ -59,6 +59,32 @@ td.tableau_resultats {
   width: 100px;
   text-align: right;
   padding-left: 30px;
+  border-radius: 0.6rem;
+  background-color:rgba(157, 119, 56, 0.7);
+  border: 0.2rem solid;
+  font-weight: bold;
+}
+
+.cfg_live {
+  width: 100px;
+  text-align: right;
+  padding-left: 30px;
+  border-radius: 0.6rem;
+  background-color:rgba(157, 119, 56, 0.7);
+  border: 0.2rem solid;
+  font-weight: bold;
+}
+
+.cfg_output_cal {
+  font-size: 16px;
+  width: 100px;
+  text-align: start;
+  padding-left: 30px;
+  color: black;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  background-color:rgb(255, 255, 255);
 }
 
 td.tableau_resultats_cg {

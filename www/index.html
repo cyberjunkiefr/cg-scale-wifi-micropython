@@ -27,6 +27,7 @@ var alang = {
   saveconf	: [ "Save config", "Sauvegarder config" ],
   resetconf : [ "Reset config", "Reinitialiser config" ],
   live          : [ "Live scale", "Mesure en direct" ],
+  live_click    : [ "Click on live value to calibrate ->", "Click sur la mesure en direct pour calibrer ->" ],
   weight_rear   : [ "Rear weight : ", "Poids arriere : " ],
   weight_front  : [ "Front weight : ", "Poids avant : " ],
   weight        : [ "Total Weight : ", "Poids total : " ],
@@ -183,6 +184,7 @@ function live_off() {
 
 function tare(i) {
   live_off();
+  while (live_to){}
   if (! i) {
     close_sidebar();
     i = 0;
@@ -203,6 +205,7 @@ function tare(i) {
 
 function calibrate(cal,i) {
   live_off();
+  while (live_to){}
   if (! i) {
     close_sidebar();
     i = 0;
@@ -386,25 +389,39 @@ function init() {
             </td>
           </tr>
           <tr>
-            <td><span id="lang_lcfrontcal"></span><br/><span id="lang_lcfrontcal_type"></span></td>
-            <td><span id="live_lcfrontcal"> </span>
+            <td>
+                <span id="lang_lcfrontcal"></span>
+                <br/>
+                  
+                <br/>
+                <span id="lang_live_click"></span>
+            </td>
+            <td>
+                <span class="cfg_output_cal" id="live_lcfrontcal"></span>
+                <br/>
+                  
+                <br/>
+                <span class="cfg_live" id="live_cfg_weight_front" onclick="calibrate('calfront')"></span>
+            </td>
           </tr>
           <tr>
-            <td><span id="live_cfg_weight_front" onclick="calibrate('calfront')"></span></td>
-          </tr>
-          <tr>
-            <td><span id="lang_lcrearcal"></span><br/><span id="lang_lcrearcal_type"></span></td>
-            <td><span id="live_lcrearcal"> </span></td>
-          </tr>
-          <tr>
-            <td><span id="live_cfg_weight_rear" onclick="calibrate('calrear')"></span></td>
+            <td>
+                <span id="lang_lcrearcal"></span>
+                <br/>
+                  
+                <br/>
+                <span id="lang_live_click"></span>
+            </td>
+            <td>
+                <span class="cfg_output_cal" id="live_lcrearcal"></span>
+                <br/>
+                 
+                <br/>
+                <span class="cfg_live" id="live_cfg_weight_rear" onclick="calibrate('calrear')"></span>
+            </td>
           </tr>
         </table>
       </div>
-
-      <div id="calibration">
-      </div>
-
       <div class="live_data" id="live">
         <table>
           <tr>
@@ -419,11 +436,14 @@ function init() {
             <td id="lang_weight"></td>
             <td class="tableau_resultats"><span id="live_weight"></span></td>
           </tr>
+          <br>
           <tr>
             <td class="cg" id="lang_cg"></td>
             <td class="tableau_resultats tableau_resultats_cg"><span id="live_cg"></span></td>
+          </tr>
         </table>
       </div>
+
     </div>
   </body>
 </html>
