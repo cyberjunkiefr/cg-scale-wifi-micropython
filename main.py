@@ -208,14 +208,32 @@ def index(req, resp):
             json = {"err": False,
                     "updated": mod}
     yield from picoweb.jsonify(resp,json)
-            
-            
+                        
 
 @app.route("/")
 def index(req, resp):
     yield from picoweb.start_response(resp)
     yield from app.sendfile(resp, '/www/index.html')
     set_rgb(0,1,0)
+
+
+@app.route("/style.css")
+def index(req, resp):
+    yield from picoweb.start_response(resp)
+    yield from app.sendfile(resp, '/www/style.css')
+
+
+@app.route("/background_main.jpg")
+def index(req, resp):
+    yield from picoweb.start_response(resp)
+    try:
+        with open("www/background_main.jpg", "rb") as img_binary:img=img_binary.read()
+        yield from resp.awrite(img)
+    except:
+        print("Image background not found")
+        pass
+
+
     
 # --------------- main --------------------
 import ulogging as logging
