@@ -208,7 +208,7 @@ def index(req, resp):
             json = {"err": False,
                     "updated": mod}
     yield from picoweb.jsonify(resp,json)
-                        
+
 
 @app.route("/")
 def index(req, resp):
@@ -219,21 +219,22 @@ def index(req, resp):
 
 @app.route("/style.css")
 def index(req, resp):
+    print("Send style.css")
     yield from picoweb.start_response(resp)
     yield from app.sendfile(resp, '/www/style.css')
 
 
 @app.route("/background_main.jpg")
 def index(req, resp):
+    print("Send JPG")
     yield from picoweb.start_response(resp)
     try:
-        with open("www/background_main.jpg", "rb") as img_binary:img=img_binary.read()
+        with open("www/background_main.jpg", 'rb') as img_binary:
+            img= img_binary.read()
         yield from resp.awrite(img)
-    except:
-        print("Image background not found")
+    except Exception:
+        print("Image file not found.")
         pass
-
-
     
 # --------------- main --------------------
 import ulogging as logging
@@ -248,7 +249,7 @@ config = read_config()
 split_config(config)
 lc_rear.set_scale(lcrearcal)
 lc_front.set_scale(lcfrontcal)
-ipaddress, ap = connection(ssid='your ssid', password='your_password', name='CGScale')
+ipaddress, ap = connection(ssid='Roek_was_here', password='Rj060195', name='CGScale')
 if ipaddress:
     if ap:
         set_rgb(1,0,1)

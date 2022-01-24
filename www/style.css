@@ -42,7 +42,7 @@ div.tableau {
   font-weight: bold;
   overflow: visible;
   padding: 0px 2px 0px 2px;
-  font-size: 20px;
+  font-size: 14px;
   height: max-content;
 }
 
@@ -66,9 +66,8 @@ td.tableau_resultats {
 }
 
 .cfg_live {
-  width: 100px;
-  text-align: right;
-  padding-left: 30px;
+  width: auto;
+  text-align: center;
   border-radius: 0.6rem;
   background-color:rgba(157, 119, 56, 0.7);
   border: 0.2rem solid;
@@ -78,12 +77,9 @@ td.tableau_resultats {
 .cfg_output_cal {
   font-size: 16px;
   width: 100px;
-  text-align: start;
+  text-align: left;
   padding-left: 30px;
   color: black;
-  border: solid;
-  border-color: black;
-  border-width: 2px;
   background-color:rgb(255, 255, 255);
 }
 
@@ -143,7 +139,7 @@ hr {
 
 button {
   background-color: rgb(255, 199, 109);
-  border-color: rgba(122, 77, 54);
+  border-color: rgb(122, 77, 54);
 }
 
 button.apparence {
@@ -161,7 +157,7 @@ button.apparence {
     border-radius: 8px;
     text-align: center;
     color:rgb(255, 199, 109) !important;
-    animation:fading 2s infinite;
+    animation:fading 1s infinite;
     padding: 15px 10px;
   }
 
@@ -169,8 +165,13 @@ button.apparence {
     background-color: rgba(157, 119, 56, 0.7);
     font-size:large;
     text-align: center;
-    animation:fading 1.5s infinite;
+    animation:fading 1s infinite;
     margin-bottom: 0px;
+  }
+
+  .blink-blue {
+    color:rgb(122, 77, 54) !important;
+    animation:fading 1s infinite;
   }
 
 
@@ -240,6 +241,10 @@ button.apparence {
     padding-left: 30px;
   }
 
+  td.tableau_resultats_cg {
+    padding: 10px 0px 10px 40px;
+  }
+
 
   .bouton_action {
     border-radius: 8px;
@@ -251,7 +256,7 @@ button.apparence {
   .cg {
     font-weight: bold;
     font-size: 30px;
-    padding: 8px 0px 4px 40px;
+    padding: 10px 0px 10px 40px;
   }
 
   .w3-button {

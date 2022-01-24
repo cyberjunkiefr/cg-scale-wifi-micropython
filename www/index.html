@@ -15,13 +15,13 @@ var alang = {
   "Distance support avant / bord d'attaque" ],
   supportledist_type  : [ "(Natural number, millimeters)", "(Entier naturel, millimetres)" ],
   calweight    : [ "Calibration weight", "Poids de calibration" ],
-  calweight_type  : [ "(Decimal number >1.0)", "(Nombre decimal > 1.0)" ],
-  lcfrontcal    : [ "Load Cell front divider",
-  "Cellule de charge Avant diviseur" ],
-  lcfrontcal_type  : [ "(Decimal number >1.0)", "(Nombre decimal > 1.0)" ],
-  lcrearcal    : [ "Load Cell rear divider",
-  "Cellule de charge Arriere diviseur" ],
-  lcrearcal_type  : [ "(Decimal number >1.0)", "(Nombre decimal > 1.0)" ],
+  calweight_type  : [ "(minimum 1 gr)", "(minimum 1 gr)" ],
+  lcfrontcal    : [ "Front cell divider",
+  "Diviseur charge avant" ],
+  lcfrontcal_type  : [ "(Decimal number > 1.0)", "(Nombre decimal > 1.0)" ],
+  lcrearcal    : [ "Rear cell divider",
+  "Diviseur charge arrière" ],
+  lcrearcal_type  : [ "(Decimal number > 1.0)", "(Nombre decimal > 1.0)" ],
   configuration : [ "Configuration", "Configuration" ],
   tare : [ "Tare empty", "Tare a vide" ],
   saveconf	: [ "Save config", "Sauvegarder config" ],
@@ -37,12 +37,12 @@ var alang = {
   status_error_live : [ "Error live: $1", "Erreur live: $1" ],
   status_error      : [ "Network error", "Erreur reseau" ],
   status_tare_countdown: [ "Tare at empty charge in $1 sec(s) \nclear the scale!",
-    "Tare à vide dans $1 sec(s) \n enlever les elements de la balance" ],
+    "Tare à vide dans $1 sec(s) \nenlever les elements de la balance" ],
   status_tare_start: [ "Tare is launched \ndon't touch the scale",
     "Tare lancee \nne toucher par la balance" ],
-  status_tare_done: [ "Tare complete \n load cell should return 0", "Tare terminée \nles cellules de charge doivent retourner 0" ],
+  status_tare_done: [ "Tare complete \nload cell should return 0", "Tare terminée \nles cellules de charge doivent retourner 0" ],
   status_calibrate_countdown: [ "Calibration with calibration weight in $1 sec(s) - Put calibraion weight on the scale!",
-    "Calibration avec poid de calibration dans $1 sec(s) - mettez le poid de calibration sur la balance!" ],
+    "Calibration avec poid de calibration dans $1 sec(s) \nmettez le poid de calibration sur la balance !" ],
   status_calibrate_start: [ "Calibration is launched - Don't touch the scale",
     "Calibration lancee - ne toucher pas la balance" ],
   status_calibrate_done: [ "Calibration complete", "Calibration finie" ]
@@ -391,33 +391,24 @@ function init() {
           <tr>
             <td>
                 <span id="lang_lcfrontcal"></span>
-                <br/>
-                  
-                <br/>
-                <span id="lang_live_click"></span>
+                <br>
+                <button class="cfg_live" id="live_cfg_weight_front" onclick="calibrate('calfront')">Click Calibration</button>
+                <br>
             </td>
             <td>
                 <span class="cfg_output_cal" id="live_lcfrontcal"></span>
-                <br/>
-                  
-                <br/>
-                <span class="cfg_live" id="live_cfg_weight_front" onclick="calibrate('calfront')"></span>
+                <br>
             </td>
           </tr>
           <tr>
             <td>
                 <span id="lang_lcrearcal"></span>
-                <br/>
-                  
-                <br/>
-                <span id="lang_live_click"></span>
+                <br>
+                <button class="cfg_live" id="live_cfg_weight_rear" onclick="calibrate('calrear')">Click Calibration</button>
             </td>
             <td>
                 <span class="cfg_output_cal" id="live_lcrearcal"></span>
-                <br/>
-                 
-                <br/>
-                <span class="cfg_live" id="live_cfg_weight_rear" onclick="calibrate('calrear')"></span>
+                <br>
             </td>
           </tr>
         </table>
