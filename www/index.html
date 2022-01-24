@@ -72,11 +72,11 @@ function conf_to_save( tosave ) {
   if (conf_to_save_current == tosave) return;
   var e = gElt('lang_saveconf');
   var btn = gElt('menu_button');
-  e.className   = e.className.replace(/ blink-blue/,"");
-  btn.className = btn.className.replace(/ blink-blue/,"");
+  e.className   = e.className.replace(/ blink_save_config/,"");
+  btn.className = btn.className.replace(/ blink_save_config/,"");
   if (tosave) {
-    e.className += ' blink-blue';
-    btn.className += ' blink-blue';
+    e.className += ' blink_save_config';
+    btn.className += ' blink_save_config';
   }
   conf_to_save_current = tosave;
 }

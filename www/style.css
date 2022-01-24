@@ -147,7 +147,7 @@ button.apparence {
 }
 
 
-@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+@keyframes fading{0%{opacity:0}50%{opacity:1}0%{opacity:0}}
   .bouton_exit {
     background-color: rgba(157, 119, 56, 0.7);
     margin: 10px 0px 0px 0px;
@@ -156,7 +156,7 @@ button.apparence {
     border-color: black;
     border-radius: 8px;
     text-align: center;
-    color:rgb(255, 199, 109) !important;
+    color:rgb(255, 199, 109);
     animation:fading 1s infinite;
     padding: 15px 10px;
   }
@@ -169,9 +169,9 @@ button.apparence {
     margin-bottom: 0px;
   }
 
-  .blink-blue {
-    color:rgb(122, 77, 54) !important;
-    animation:fading 1s infinite;
+  .blink_save_config {
+    background-color:rgb(122, 77, 54);
+    animation:fading 2s infinite;
   }
 
 
