@@ -1,0 +1,284 @@
+* {
+  overflow: auto;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 35%), rgba(0, 0, 0, 35%)), url("background_main.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  background-color: rgb(54, 98, 139);
+  margin: 0px;
+  font-family: Arial;
+  font-size: 16px;  
+  overflow: visible;
+  color:rgb(255, 199, 109) !important;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3%;
+  font-style: oblique;
+  margin-top: 20px;
+  margin-bottom: -45px;
+  color: black;
+}
+
+h2 {
+  font-size: 9px;
+  color: #616161;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+div.tableau {  
+  position: relative;
+  text-align: center;
+  color: rgb(255, 199, 109);
+  margin: 0px 20px 0px 20px;
+  box-shadow: 0px 0px 20px 8px #23272cc0;
+  display: inline-block;
+  font-weight: bold;
+  overflow: visible;
+  padding: 0px 2px 0px 2px;
+  font-size: 14px;
+  height: max-content;
+}
+
+div.live_data{
+  font-size: 20;
+  text-align: left;
+}
+
+td {
+  min-width: 115px;
+}
+
+td.tableau_resultats {
+  width: 100px;
+  text-align: right;
+  padding-left: 30px;
+  border-radius: 0.6rem;
+  background-color:rgba(157, 119, 56, 0.7);
+  border: 0.2rem solid;
+  font-weight: bold;
+}
+
+.cfg_live {
+  width: auto;
+  text-align: center;
+  border-radius: 0.6rem;
+  background-color:rgba(157, 119, 56, 0.7);
+  border: 0.2rem solid;
+  font-weight: bold;
+}
+
+.cfg_output_cal {
+  font-size: 16px;
+  width: 100px;
+  text-align: left;
+  padding-left: 30px;
+  color: black;
+  background-color:rgb(255, 255, 255);
+}
+
+td.tableau_resultats_cg {
+  font-size: 36px;
+  border-radius: 0.6rem;
+  background-color:rgba(157, 119, 56, 0.7);
+  border: 0.2rem solid;
+  color:rgb(255, 199, 109);
+}
+
+.bouton_action {
+  border-radius: 8px;
+  font-size: 30;
+  font-weight: bold;
+  padding: 4px 10px 1px 10px;
+  display: inline-block;
+}
+
+.cg {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 4px 0px 4px 0px;
+}
+
+
+div.barre_nav {
+  background: linear-gradient(0deg, rgba(157, 119, 56, 0.801), rgba(157, 119, 56, 0.801)), url("F4U_image.jpg") no-repeat center center fixed;
+  font-weight: bold;
+  display: block;
+  width: auto;
+  text-align: center;
+}
+
+a {
+  white-space:normal;
+  background-color:rgba(157, 119, 56, 0.7);
+  padding:17px 9px;
+  width:auto;
+  border: 0.2rem solid;
+  display:block;
+  outline: 4px ridge rgba(122, 77, 54, 0.6);
+  border-radius: 0.6rem;
+  color:rgb(255, 199, 109);
+  font-weight: bold;
+}
+
+a:hover {
+  color:rgba(36, 35, 40, 0.70);
+  text-decoration:none;
+  background-color: rgba(255, 223, 146, 0.7);
+  }
+
+hr {
+  border: 0.5px dashed rgba(157, 119, 56, 0.7);
+}
+
+button {
+  background-color: rgb(255, 199, 109);
+  border-color: rgb(122, 77, 54);
+}
+
+button.apparence {
+  font-size: xx-large;
+}
+
+
+@keyframes fading{0%{opacity:0}50%{opacity:1}0%{opacity:0}}
+  .bouton_exit {
+    background-color: rgba(157, 119, 56, 0.7);
+    margin: 10px 0px 0px 0px;
+    width: 100px;
+    display: inline-block;
+    border-color: black;
+    border-radius: 8px;
+    text-align: center;
+    color:rgb(255, 199, 109);
+    animation:fading 3s infinite;
+    padding: 15px 10px;
+  }
+
+  h5 {
+    background-color: rgba(157, 119, 56, 0.7);
+    font-size:large;
+    text-align: center;
+    animation:fading 1s infinite;
+    margin-bottom: 0px;
+  }
+
+  .blink_save_config {
+    background-color:rgba(122, 77, 54, 0.5);
+    animation:fading 2s infinite;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONFIGURATION PC MINI RESO 520 Pixels */
+
+
+
+@media only screen and (min-width: 525px) {
+  body {
+    font-size: 18px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: -59px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    padding-left: 15px;
+    margin-top: 15px;
+  }
+
+  div.tableau {  
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-shadow: 0px 0px 20px 8px #23272cc0;
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+
+  div.live_data{
+    padding-top: 0px;
+    font-size: 30px;
+  }
+  
+  td {
+    min-width: 400px;
+    text-align: left;
+    padding: 10px 0px 10px 40px;
+  }
+
+  td.tableau_resultats {
+    min-width: 100px;
+    width: 200px;
+    text-align: right;
+    padding-left: 30px;
+  }
+
+  td.tableau_resultats_cg {
+    padding: 10px 0px 10px 40px;
+  }
+
+
+  .bouton_action {
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 4px 10px 1px 10px;
+    display: inline-block;
+  }
+  
+  .cg {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 0px 10px 40px;
+  }
+
+  .w3-button {
+    white-space:normal
+  }
+  
+  button {
+    font-size: 25px !important;
+  }
+
+  div.barre_nav {
+    width: 180px;
+  }
+
+  @keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .bouton_exit {
+      margin: -10px;
+      width: 100%;
+      padding: 0px;
+    }
+
+    h5 {
+      font-size:xx-large;
+    }
+}
