@@ -45,7 +45,9 @@ var alang = {
     "Calibration avec poid de calibration dans $1 sec(s) \nmettez le poid de calibration sur la balance !" ],
   status_calibrate_start: [ "Calibration is launched - Don't touch the scale",
     "Calibration lancee - ne toucher pas la balance" ],
-  status_calibrate_done: [ "Calibration complete", "Calibration finie" ]
+  status_calibrate_done: [ "Calibration complete", "Calibration finie" ],
+  clic_calibration: [ "Click to calibrate", "Click pour calibrer" ],
+  clic_calib: [ "Click to calibrate", "Click pour calibrer" ]
 };
 var screens = [ 'configuration', 'live' ];
 
@@ -392,7 +394,10 @@ function init() {
             <td>
                 <span id="lang_lcfrontcal"></span>
                 <br>
-                <button class="cfg_live" id="live_cfg_weight_front" onclick="calibrate('calfront')">Click Calibration</button>
+                <div>
+                  <span id="lang_clic_calibration"></span>
+                  <button class="cfg_live" id="live_cfg_weight_front" onclick="calibrate('calfront')">value</button>
+                </div>
                 <br>
             </td>
             <td>
@@ -404,7 +409,11 @@ function init() {
             <td>
                 <span id="lang_lcrearcal"></span>
                 <br>
-                <button class="cfg_live" id="live_cfg_weight_rear" onclick="calibrate('calrear')">Click Calibration</button>
+                <div>
+                  <span id="lang_clic_calib"></span>
+                  <button class="cfg_live" id="live_cfg_weight_rear" onclick="calibrate('calrear')">value</button>
+                </div>
+                <br>
             </td>
             <td>
                 <span class="cfg_output_cal" id="live_lcrearcal"></span>
